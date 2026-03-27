@@ -1,0 +1,71 @@
+name: signo_peru_app
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: ">=3.16.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  
+  # Core dependencies - solo las esenciales primero
+  dio: ^5.3.2
+  provider: ^6.1.5
+  video_player: ^2.10.0
+  http: ^1.2.0
+  
+  # Permissions y storage (movidos de dev_dependencies)
+  permission_handler: ^12.0.0+1
+  path_provider: ^2.1.1
+  shared_preferences: ^2.2.2
+  
+  # Camera - versión más estable
+  camera: ^0.10.5+9
+  
+  # Utilities
+  flutter_dotenv: ^5.2.1
+  image: ^4.5.4
+  
+  web_socket_channel: ^2.4.0
+
+  # Dependencia necesaria para word_select.dart
+  flutter_staggered_animations: ^1.1.1
+  connectivity_plus: ^7.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.14.3
+  
+  # Build tools
+  build_runner: ^2.3.3
+  retrofit_generator: '>=8.0.0 <10.0.0'
+  json_serializable: ^6.8.0
+  json_annotation: ^4.9.0
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon.png"
+  adaptive_icon_background: "#ffffff"
+  adaptive_icon_foreground: "assets/icon.png"
+
+flutter:
+  uses-material-design: true
+  
+  assets:
+    - .env
+    - assets/logo.png
+    - assets/icon.png
+    - assets/sena.png
+    - assets/VIDEO.mp4
+
+    
+
+

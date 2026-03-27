@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Fondo naranja completo -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/splash"/>
+        </shape>
+    </item>
+
+    <!-- Círculo naranja centrado con sombra suave -->
+    <item
+        android:gravity="center"
+        android:width="280dp"
+        android:height="280dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/splash"/>
+            <stroke android:width="3dp" android:color="#ee7f08ee"/>
+        </shape>
+    </item>
+
+    <!-- Logo centrado dentro del círculo -->
+    <item
+        android:gravity="center"
+        android:width="200dp"
+        android:height="200dp">
+        <bitmap
+            android:src="@drawable/logo"
+            android:gravity="center"
+            android:antialias="true"/>
+    </item>
+
+</layer-list>
