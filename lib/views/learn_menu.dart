@@ -20,18 +20,19 @@ class _LearnMenuScreenState extends State<LearnMenuScreen>
 
   final List<String> _categoriasReto = [];
   final List<String> _categoriasDificil = [
-    'VERBOS'
+    'VERBOS',
   ];
 
   final Map<String, IconData> _categoryIcons = {
-    'CONCEPTOS Y ESTADOS': Icons.lightbulb,
-    'CUALIDADES Y PERCEPCIONES': Icons.visibility,
-    'PALABRAS FUNCIONALES': Icons.functions,
-    'LUGARES Y GEOGRAFIA': Icons.location_on,
-    'PERSONAS Y CARACTERISTICAS FISICAS': Icons.person,
+    'CONCEPTOS_Y_ESTADOS': Icons.psychology,
+    'CUALIDADES_Y_PERCEPCIONES': Icons.auto_awesome,
+    'PALABRAS_FUNCIONALES': Icons.spellcheck,
+    'LUGARES_Y_GEOGRAFIA': Icons.map,
+    'PERSONAS_Y_CARACTERISTICAS_FISICAS': Icons.people,
     'VERBOS': Icons.directions_run,
-    'OBJETOS Y TECNOLOGIA': Icons.devices,
+    'OBJETOS_Y_TECNOLOGIA': Icons.devices,
   };
+
 
   @override
   void initState() {
@@ -82,7 +83,7 @@ class _LearnMenuScreenState extends State<LearnMenuScreen>
     return const Color(0xFFf58b2a);
   }
 
-  Color _getIconBackgroundColor(bool isDifficult, bool isReto) {
+  Color _getIconBackgroundColor(bool isDifficult, bool isReto, String nombre) {
     if (isReto) return Colors.red.shade600;
     if (isDifficult) return Colors.orange.shade600;
     return const Color(0xFFf58b2a);
@@ -163,7 +164,7 @@ class _LearnMenuScreenState extends State<LearnMenuScreen>
                           Container(
                             padding: const EdgeInsets.all(12),
                             decoration: BoxDecoration(
-                              color: _getIconBackgroundColor(isDifficult, isReto),
+                              color: _getIconBackgroundColor(isDifficult, isReto, nombre),
                               borderRadius: BorderRadius.circular(15),
                             ),
                             child: Icon(

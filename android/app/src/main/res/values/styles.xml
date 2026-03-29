@@ -27,6 +27,7 @@
     <style name="Theme.App" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="windowSplashScreenBackground">@color/splash</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/logo</item>
+        <item name="windowSplashScreenIconBackgroundColor">@color/splash</item>
         <item name="windowSplashScreenAnimationDuration">600</item>
         <item name="postSplashScreenTheme">@style/Theme.App.Normal</item>
         <item name="android:windowBackground">@drawable/avd_splash</item>

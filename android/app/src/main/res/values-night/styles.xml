@@ -1,54 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Theme applied to the Android Window while the process is starting when the OS's Dark Mode setting is on -->
     <style name="LaunchTheme" parent="@android:style/Theme.Black.NoTitleBar">
-        <!-- Show a splash screen on the activity. Automatically removed when
-             the Flutter engine draws its first frame -->
-        <!-- dibuja tu layer-list -->
-        <!-- fondo rojo -->
-            <item name="android:windowBackground">@drawable/avd_splash</item>
-            <!-- 1) que dibuje detrás de la status/nav bar -->
-            <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-            <!-- 2) sin ajustar a las zonas de sistema -->
-            <item name="android:fitsSystemWindows">false</item>
-            <!-- 3) transparentes para que se vea tu rojo -->
-            <item name="android:statusBarColor">@android:color/transparent</item>
-            <item name="android:navigationBarColor">@android:color/transparent</item>
-            <!-- 4) notch/full-screen en displays con cutout -->
-            <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
-        <!-- duración base de la animación de salida -->
-
+        <item name="android:windowBackground">@drawable/avd_splash</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:fitsSystemWindows">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
     </style>
-    <!-- Theme applied to the Android Window as soon as the process has started.
-         This theme determines the color of the Android Window while your
-         Flutter UI initializes, as well as behind your Flutter UI while its
-         running.
 
-         This Theme is only used starting with V2 of Flutter's Android embedding. -->
     <style name="NormalTheme" parent="@android:style/Theme.Black.NoTitleBar">
         <item name="android:windowBackground">?android:colorBackground</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
     </style>
-    <!-- Tema normal de la app, tras la splash -->
+
     <style name="Theme.App.Normal" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="android:windowBackground">?android:colorBackground</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-        <!-- Hace transparente la status-bar y nav-bar -->
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
-        <!-- No recorta el layout para las zonas de sistema -->
         <item name="android:fitsSystemWindows">false</item>
-        <!-- Si hay notch, permite usar toda el área -->
         <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
     </style>
+
     <style name="Theme.App" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <!-- fondo nativo -->
         <item name="windowSplashScreenBackground">@color/splash</item>
-        <!-- icono PNG centrado -->
-        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher_foreground</item>
-        <!-- duración “genérica” de animación (opcional) -->
+        <item name="windowSplashScreenAnimatedIcon">@drawable/logo</item>
+        <item name="windowSplashScreenIconBackgroundColor">@color/splash</item>
         <item name="windowSplashScreenAnimationDuration">600</item>
-        <!-- tema que se aplicará después -->
         <item name="postSplashScreenTheme">@style/Theme.App.Normal</item>
+        <item name="android:windowBackground">@drawable/avd_splash</item>
     </style>
 </resources>

@@ -6,6 +6,7 @@ import 'package:signo_peru_app/views/esp_lsp_screen.dart';
 import 'package:signo_peru_app/views/learn_doit_screen.dart';
 import 'package:signo_peru_app/views/learn_menu.dart';
 import 'package:signo_peru_app/views/lsp_screen.dart';
+import 'package:signo_peru_app/views/dona_screen.dart';
 import 'package:signo_peru_app/views/onboarding.dart';
 import 'package:flutter/services.dart';
 import 'package:signo_peru_app/views/subcat_select.dart';
@@ -125,6 +126,7 @@ class _MyAppState extends State<MyApp> {
         "/lsp": (context) => LspScreen(),
         "/esp-lsp": (context) => EspLspScreen(),
         "/learn": (context) => LearnMenuScreen(),
+        "/dona": (context) => const DonaScreen(),
       },
       onGenerateRoute: (RouteSettings settings) {
         final args = settings.arguments;
